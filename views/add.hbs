@@ -1,0 +1,14 @@
+<h2>Thêm sách mới</h2>
+
+{{#if error}}
+  <p class="error">{{error}}</p>
+{{/if}}
+
+<form method="POST" action="/add">
+  <p>Mã sản phẩm (phải bắt đầu bằng <b>{{prefix}}</b>):<br>
+    <input name="code" required placeholder="{{prefix}}-SACH01"></p>
+  <p>Tên sách:<br><input name="title" required></p>
+  <p>Tác giả:<br><input name="author"></p>
+  <p>Giá gốc (VNĐ):<br><input name="price" type="number" min="0" required></p>
+  <button type="submit">Lưu</button>
+</form>
